@@ -181,9 +181,9 @@ function Home() {
    }
 
   return (
-    <div className='space-y-16 p-[1rem] m-auto max-w-[1280px]'>
+    <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
-<div className='flex flex-col justify-start items-start'>
+<div className='flex flex-col justify-start pb-4 items-start'>
       <p className='font-bold'>Instructions</p>
       <p>Just enter known values and left the unknown value empty and Click Calculate.</p>
      </div>
@@ -205,7 +205,7 @@ function Home() {
       </div>
       </details>
 {/* Ordinary Annuity Calculator  */}
-      <div className='space-y-16'>
+      <div className='space-y-6'>
         {/* Present Value of Ordinary Annuity */}
         <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Future Value of Ordinary Annuity</summary>
@@ -244,7 +244,7 @@ function Home() {
       {/* Simple Annuity Calculator  */}
      
 {/* Annuity Due Calculator  */}
-      <div className='space-y-16'>
+      <div className='space-y-6'>
         {/* Present Value of Annuity Due */}
         <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Future Value of Annuity Due</summary>
