@@ -26,6 +26,10 @@ function Home() {
   const [duePintr, setDuePintr] = useState('');
   const [dueFperiod, setDueFperiod] = useState('');
   const [duePperiod, setDuePperiod] = useState('');
+  const [quoteRate, setQuoteRate] = useState('');
+  const [freqComp, setFreqComp] = useState('');
+  const [expar, setExpar] = useState('');
+  const [answerEAR, setAnswerEAR] = useState('');
 
   const simpleAnnuity = () => {
    if(pvalue === '') {
@@ -180,6 +184,36 @@ function Home() {
     }
    }
 
+   const calEAR = () => {
+    if(expar === '') {
+      const f = freqComp/100;
+     const a = 1 + quoteRate/f;
+     const b = Math.pow(a, f);
+     const c = b - 1;
+     setAnswerEAR(c.toFixed(5))
+    } else if(quoteRate === '') {
+      const a = 1 + duePintr/100;
+      const z = -duePperiod;
+      const b = Math.pow(a, z);
+      const c = 1 - b;
+      const d = (c/duePintr)*100;
+      const e = duePvalue/d;
+      const f = e / a;
+      setAnswerEAR(f.toFixed(5))
+    } else if(freqComp === '') {
+    const a = duePvalue/duePcash;
+    const b = 1 + duePintr/100;
+    const c = a * duePintr/100;
+    const g = c / b;
+    const d = 1 - g;
+    const e = Math.log(d)/Math.log(b);
+    const f = -e;
+    setAnswerEAR(f.toFixed(5));
+    } else {
+      setAnswerEAR("All Already Known")
+    }
+   }
+
   return (
     <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
@@ -275,6 +309,22 @@ function Home() {
         <button onClick={duePresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerDuePresent || "Answer"}`}</p>
+        </div>
+        </div>
+        </div>
+</details>
+
+{/* EAR Effective Annual Rate */}
+<details className="collapse collapse-arrow bg-base-200">
+  <summary className="collapse-title sm:text-xl text-md font-medium">Effective Annual Rate</summary>
+  <div className="collapse-content"> 
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
+        <input onChange={e => setExpar(e.target.value)} type="text" placeholder="Effective Rate" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setQuoteRate(e.target.value)} type="text" placeholder="Quote Rate" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setFreqComp(e.target.value)} type="text" placeholder="no. of Compounding per Year" className="input input-bordered w-auto max-w-xs" />
+        <button onClick={calEAR} className="btn input-bordered back">Calculate</button>
+        <div className='items-center input input-bordered justify-center flex'>
+          <p className=''>{`${answerEAR || "Answer"}`}</p>
         </div>
         </div>
         </div>
