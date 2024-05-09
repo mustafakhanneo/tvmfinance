@@ -26,7 +26,7 @@ function App() {
 
 
   <div className="navbar-center">
-    <a className="btn btn-ghost font-kola sm:text-2xl text-sm" href='./'>TVM Finance: Time Value of Money</a>
+    <a className="btn btn-ghost font-kola sm:text-2xl text-md" href='./'>TVM Finance</a>
   </div>
   
 
