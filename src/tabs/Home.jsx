@@ -420,11 +420,11 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Growing Annuity</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setGPresentValue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-1/5 max-w-xs" />
-        <input onChange={e => setGCashflow(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-1/5 max-w-xs" />
-        <input onChange={e => setGIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-1/5 max-w-xs" />
-        <input onChange={e => setGRateAnnu(e.target.value)} type="text" placeholder="Growth Rate in % eg: 10" className="input input-bordered w-1/5 max-w-xs" />
-        <input onChange={e => setGPeriod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-1/5 max-w-xs" />
+        <input onChange={e => setGPresentValue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGCashflow(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGRateAnnu(e.target.value)} type="text" placeholder="Growth Rate in % eg: 10" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGPeriod(e.target.value)} type="text" placeholder="Period" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
         <button onClick={calGAnnu} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerGAnnu || "Answer"}`}</p>
