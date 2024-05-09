@@ -190,7 +190,7 @@ function Home() {
 {/* Simple Annuity Calculator  */}
       <div className='space-y-4'>
         <p className='font-bold'>Simple Present Future Value</p>
-        <div className='flex flex-row space-x-6'>
+        <div className='flex sm:flex-row flex-col space-x-6'>
         <input onChange={e => setPvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
