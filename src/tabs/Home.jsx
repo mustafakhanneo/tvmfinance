@@ -183,8 +183,8 @@ function Home() {
   return (
     <div className='space-y-16 p-[1rem] m-auto max-w-[1280px]'>
     
-<div className='flex flex-col justify-start items-start font-bold'>
-      <p>Instructions</p>
+<div className='flex flex-col justify-start items-start'>
+      <p className='font-bold'>Instructions</p>
       <p>Just enter known values and left the unknown value empty and Click Calculate.</p>
      </div>
 {/* Simple Annuity Calculator  */}
