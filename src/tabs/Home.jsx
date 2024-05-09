@@ -39,6 +39,12 @@ function Home() {
   const [gPrepFuture, setGPrepFuture] = useState('');
   const [gRate, setGRate] = useState('');
   const [answerGPrepsimp, setAnswerGPrepsimp] = useState('');
+  const [gPresentValue, setGPresentValue] = useState('');
+  const [gCashflow, setGCashflow] = useState('');
+  const [gIntr, setGIntr] = useState('');
+  const [gRateAnnu, setGRateAnnu] = useState('');
+  const [gPeriod, setGPeriod] = useState('');
+  const [answerGAnnu, setAnswerGAnnu] = useState('');
 
   const simpleAnnuity = () => {
    if(pvalue === '') {
@@ -189,6 +195,47 @@ function Home() {
     const f = -e;
     setAnswerDuePresent(f.toFixed(5));
     } else {
+     setAnswerDuePresent("All Already Known")
+    }
+   }
+
+   const calGAnnu = () => {
+    if(gPresentValue === '') {
+     const a = 1 + gIntr/100;
+     const b = 1 + gRateAnnu/100;
+     const c = (gIntr/100)-(gRateAnnu/100);
+     const d = b/a;
+     const e = Math.pow(d, gPeriod);
+     const f = 1 - e;
+     const g = f/c;
+     const h = g * gCashflow;
+     setAnswerGAnnu(h.toFixed(5))
+    } else if(gCashflow === '') {
+      const a = 1 + gIntr/100;
+     const b = 1 + gRateAnnu/100;
+     const c = (gIntr/100)-(gRateAnnu/100);
+     const d = b/a;
+     const e = Math.pow(d, gPeriod);
+     const f = 1 - e;
+     const g = f/c;
+     const h = gPresentValue/g;
+     setAnswerGAnnu(h.toFixed(5))
+    } else if(gIntr === '') {
+      setAnswerGAnnu("Calculate Your Self")
+    } else if(gRateAnnu === '') {
+      setAnswerGAnnu("Calculate Your Self")
+    } else if(gPeriod === '') {
+      const a = 1 + gIntr/100;
+     const b = 1 + gRateAnnu/100;
+     const c = (gIntr/100)-(gRateAnnu/100);
+     const d = b/a;
+     const e = gPresentValue/gCashflow;
+     const f = e * c;
+     const g = 1 - f;
+      const h = Math.log(g)/Math.log(d);
+      setAnswerGAnnu(h.toFixed(5))
+      console.log(a, b, c, d, e, f, g, h)
+      } else {
      setAnswerDuePresent("All Already Known")
     }
    }
@@ -363,6 +410,24 @@ function Home() {
         <button onClick={duePresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerDuePresent || "Answer"}`}</p>
+        </div>
+        </div>
+        </div>
+</details>
+
+{/* Present Value of Growing Annuity */}
+<details className="collapse collapse-arrow bg-base-200">
+  <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Growing Annuity</summary>
+  <div className="collapse-content"> 
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
+        <input onChange={e => setGPresentValue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-1/5 max-w-xs" />
+        <input onChange={e => setGCashflow(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-1/5 max-w-xs" />
+        <input onChange={e => setGIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-1/5 max-w-xs" />
+        <input onChange={e => setGRateAnnu(e.target.value)} type="text" placeholder="Growth Rate in % eg: 10" className="input input-bordered w-1/5 max-w-xs" />
+        <input onChange={e => setGPeriod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-1/5 max-w-xs" />
+        <button onClick={calGAnnu} className="btn input-bordered back">Calculate</button>
+        <div className='items-center input input-bordered justify-center flex'>
+          <p className=''>{`${answerGAnnu || "Answer"}`}</p>
         </div>
         </div>
         </div>
