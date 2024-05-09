@@ -270,6 +270,26 @@ function Home() {
         </div>
         </div>
         </div>
+
+        {/* Present Value of Annuity DUe */}
+
+        <details className="collapse bg-base-200">
+  <summary className="collapse-title text-xl font-medium">Present Value of Annuity Due</summary>
+  <div className="collapse-content"> 
+  <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
+        <input onChange={e => setDuePvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
+        <button onClick={duePresent} className="btn back">Calculate</button>
+        <div className='items-center justify-center flex'>
+          <p className='font-bold text-2xl'>{answerDuePresent}</p>
+        </div>
+        </div>
+  </div>
+</details>
+    
+
       </div>
      
     </div>
