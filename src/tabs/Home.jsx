@@ -196,7 +196,7 @@ function Home() {
         <input onChange={e => setFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setPeroid(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
-        <button onClick={simpleAnnuity} className="btn w-auto back">Calculate</button>
+        <button onClick={simpleAnnuity} className="btn w-auto back input-bordered">Calculate</button>
         <div className='items-center justify-center flex'>
           <p className='font-bold text-2xl'>{answersimp}</p>
         </div>
@@ -215,7 +215,7 @@ function Home() {
         <input onChange={e => setOriFcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriFintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriFperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
-        <button onClick={oriFuture} className="btn back">Calculate</button>
+        <button onClick={oriFuture} className="btn input-bordered back">Calculate</button>
         <div className='items-center justify-center flex'>
           <p className='font-bold text-2xl'>{answerOrdinaryFuture}</p>
         </div>
@@ -233,7 +233,7 @@ function Home() {
         <input onChange={e => setOriPcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriPintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriPperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
-        <button onClick={oriPresent} className="btn back">Calculate</button>
+        <button onClick={oriPresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center justify-center flex'>
           <p className='font-bold text-2xl'>{answerOrdinaryPresent}</p>
         </div>
@@ -254,7 +254,7 @@ function Home() {
         <input onChange={e => setDueFcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDueFintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDueFperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
-        <button onClick={dueFuture} className="btn back">Calculate</button>
+        <button onClick={dueFuture} className="btn input-bordered back">Calculate</button>
         <div className='items-center justify-center flex'>
           <p className='font-bold text-2xl'>{answerDueFuture}</p>
         </div>
@@ -272,7 +272,7 @@ function Home() {
         <input onChange={e => setDuePcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDuePintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDuePperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
-        <button onClick={duePresent} className="btn back">Calculate</button>
+        <button onClick={duePresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center justify-center flex'>
           <p className='font-bold text-2xl'>{answerDuePresent}</p>
         </div>
