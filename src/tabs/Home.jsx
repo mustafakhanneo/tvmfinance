@@ -190,12 +190,12 @@ function Home() {
 {/* Simple Annuity Calculator  */}
       <div className='space-y-4'>
         <p className='font-bold'>Simple Present Future Value</p>
-        <div className='flex sm:flex-row flex-col space-x-6 sm:space-y-0 space-y-2'>
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input onChange={e => setPvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setPeroid(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
-        <button onClick={simpleAnnuity} className="btn back">Calculate</button>
+        <button onClick={simpleAnnuity} className="btn w-auto back">Calculate</button>
         <div className='items-center justify-center flex'>
           <p className='font-bold text-2xl'>{answersimp}</p>
         </div>
@@ -207,7 +207,7 @@ function Home() {
         {/* Present Value of Ordinary Annuity */}
         <div className='space-y-4'>
         <p className='font-bold '>Future Value of Ordinary Equity</p>
-        <div className='flex flex-row space-x-6'>
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input onChange={e => setOriFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriFcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriFintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
@@ -223,7 +223,7 @@ function Home() {
         {/* Present Value of Ordinary Annuity */}
 <div className='space-y-4'>
         <p className='font-bold '>Present Value of Ordinary Annuity</p>
-        <div className='flex flex-row space-x-6'>
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input onChange={e => setOriPvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriPcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriPintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
@@ -243,7 +243,7 @@ function Home() {
         {/* Present Value of Annuity Due */}
         <div className='space-y-4'>
         <p className='font-bold '>Future Value of Annuity Due</p>
-        <div className='flex flex-row space-x-6'>
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input onChange={e => setDueFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDueFcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDueFintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
@@ -259,7 +259,7 @@ function Home() {
         {/* Present Value of Annuity DUe */}
 <div className='space-y-4'>
         <p className='font-bold '>Present Value of Annuity Due</p>
-        <div className='flex flex-row space-x-6'>
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input onChange={e => setDuePvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDuePcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
         <input onChange={e => setDuePintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
