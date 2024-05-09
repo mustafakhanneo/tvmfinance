@@ -30,6 +30,10 @@ function Home() {
   const [freqComp, setFreqComp] = useState('');
   const [expar, setExpar] = useState('');
   const [answerEAR, setAnswerEAR] = useState('');
+  const [prepCashflow, setPrepCashflow] = useState('');
+  const [prepintr, setPrepintr] = useState('');
+  const [prepFuture, setPrepFuture] = useState('');
+  const [answerPrepsimp, setAnswerPrepsimp] = useState('');
 
   const simpleAnnuity = () => {
    if(pvalue === '') {
@@ -205,6 +209,27 @@ function Home() {
     }
    }
 
+   const calPrep = () => {
+    if(prepFuture === '') {
+      const f = prepintr/100;
+     const a = prepCashflow/f;
+     setAnswerPrepsimp(a.toFixed(5))
+    } else if(prepCashflow === '') {
+      const f = prepintr/100;
+     const a = prepFuture * f;
+     setAnswerPrepsimp(a.toFixed(5))
+    
+    } else if(prepintr === '') {
+      
+     const a = prepCashflow/prepFuture;
+     const f = a * 100;
+     setAnswerPrepsimp(`${f.toFixed(2)}%`)
+    setAnswerEAR("Calculate yourself");
+    } else {
+      setAnswerPrepsimp("All Already Known")
+    }
+   }
+
   return (
     <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
@@ -321,6 +346,22 @@ function Home() {
         </div>
 </details>
 
+
+{/* Prepetual Investment Return */}
+<details className="collapse collapse-arrow bg-base-200">
+  <summary className="collapse-title sm:text-xl text-md font-medium">Prepetual Investment Return</summary>
+  <div className="collapse-content"> 
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
+        <input onChange={e => setPrepFuture(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPrepCashflow(e.target.value)} type="text" placeholder="Cashflow" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPrepintr(e.target.value)} type="text" placeholder="interest Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
+        <button onClick={calPrep} className="btn input-bordered back">Calculate</button>
+        <div className='items-center input input-bordered justify-center flex'>
+          <p className=''>{`${answerPrepsimp || "Answer"}`}</p>
+        </div>
+        </div>
+        </div>
+</details>
 
       </div>
      
