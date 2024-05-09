@@ -34,6 +34,11 @@ function Home() {
   const [prepintr, setPrepintr] = useState('');
   const [prepFuture, setPrepFuture] = useState('');
   const [answerPrepsimp, setAnswerPrepsimp] = useState('');
+  const [gPrepCashflow, setGPrepCashflow] = useState('');
+  const [gPrepintr, setGPrepintr] = useState('');
+  const [gPrepFuture, setGPrepFuture] = useState('');
+  const [gRate, setGRate] = useState('');
+  const [answerGPrepsimp, setAnswerGPrepsimp] = useState('');
 
   const simpleAnnuity = () => {
    if(pvalue === '') {
@@ -230,6 +235,38 @@ function Home() {
     }
    }
 
+   const callGPrep = () => {
+    if(gPrepFuture === '') {
+     const a = gPrepintr/100;
+     const z = gRate/100;
+     const b = a - z;
+     const c = gPrepCashflow/b;
+     setAnswerGPrepsimp(c.toFixed(5))
+    } else if(gPrepCashflow === '') {
+      const a = 1 + duePintr/100;
+      const z = -duePperiod;
+      const b = Math.pow(a, z);
+      const c = 1 - b;
+      const d = (c/duePintr)*100;
+      const e = duePvalue/d;
+      const f = e / a;
+      setAnswerGPrepsimp(f.toFixed(5))
+    } else if(gPrepintr === '') {
+      setAnswerGPrepsimp("Calculate Your Self")
+    } else if(gRate === '') {
+    const a = duePvalue/duePcash;
+    const b = 1 + duePintr/100;
+    const c = a * duePintr/100;
+    const g = c / b;
+    const d = 1 - g;
+    const e = Math.log(d)/Math.log(b);
+    const f = -e;
+    setAnswerGPrepsimp(f.toFixed(5));
+    } else {
+     setAnswerGPrepsimp("All Already Known")
+    }
+   }
+
   return (
     <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
@@ -358,6 +395,24 @@ function Home() {
         <button onClick={calPrep} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerPrepsimp || "Answer"}`}</p>
+        </div>
+        </div>
+        </div>
+</details>
+
+
+{/* Growing Prepetual Investment Return */}
+<details className="collapse collapse-arrow bg-base-200">
+  <summary className="collapse-title sm:text-xl text-md font-medium"> Growing Prepetual Investment Return</summary>
+  <div className="collapse-content"> 
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
+        <input onChange={e => setGPrepFuture(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGPrepCashflow(e.target.value)} type="text" placeholder="Cashflow" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGPrepintr(e.target.value)} type="text" placeholder="Interest Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGRate(e.target.value)} type="text" placeholder="Growth Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
+        <button onClick={callGPrep} className="btn input-bordered back">Calculate</button>
+        <div className='items-center input input-bordered justify-center flex'>
+          <p className=''>{`${answerGPrepsimp || "Answer"}`}</p>
         </div>
         </div>
         </div>
