@@ -18,8 +18,7 @@ function App() {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href='./formula'>Formulas</a></li>
-        <li><a href='./notfound'>NotFound</a></li>
-        <li><a>About</a></li>
+        <li><a href='./about'>About</a></li>
       </ul>
     </div>
   </div>
