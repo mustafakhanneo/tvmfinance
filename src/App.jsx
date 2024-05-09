@@ -191,7 +191,7 @@ function App() {
 </div>
 <div className='flex flex-col justify-start items-start font-bold'>
       <p>Instructions</p>
-      <p>Just enter known values and left empty the unknown value and Click Calculate.</p>
+      <p>Just enter known values and left the unknown value empty and Click Calculate.</p>
      </div>
 {/* Simple Annuity Calculator  */}
       <div className='space-y-4'>
