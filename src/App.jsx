@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './tabs/Home'
 import Formula from './tabs/Formula';
 import NotFound from './tabs/NotFound';
+import About from './tabs/About';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
 <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/formula" element={<Formula/>} />
+          <Route path="/about" element={<About/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
      
