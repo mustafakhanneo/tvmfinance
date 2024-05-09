@@ -3,6 +3,10 @@
       font-family: 'Kola';
       src: url(./fonts/Kola-Regular.ttf) format('truetype');
     }
+    @font-face {
+        font-family: 'Tanker';
+        src: url(./fonts/Tanker-Regular.ttf) format('truetype');
+      }
   }
 @tailwind base;
 @tailwind components;

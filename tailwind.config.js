@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        kola : ["Kola", "sens-serif"]
+        kola : ["Kola", "sens-serif"],
+        tanker : ["Tanker", "sens-serif"]
       }
     },
   },
