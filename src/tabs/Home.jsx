@@ -274,7 +274,7 @@ function Home() {
         <input onChange={e => setDuePperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
         <button onClick={duePresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
-          <p className=''>{`${answerDueFuture || "Answer"}`}</p>
+          <p className=''>{`${answerDuePresent || "Answer"}`}</p>
         </div>
         </div>
         </div>
