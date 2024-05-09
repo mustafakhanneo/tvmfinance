@@ -188,7 +188,7 @@ function Home() {
       <p>Just enter known values and left the unknown value empty and Click Calculate.</p>
      </div>
 {/* Simple Annuity Calculator  */}
-<details className="collapse bg-base-200">
+<details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Simple Present Future Value</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
@@ -207,7 +207,7 @@ function Home() {
 {/* Ordinary Annuity Calculator  */}
       <div className='space-y-16'>
         {/* Present Value of Ordinary Annuity */}
-        <details className="collapse bg-base-200">
+        <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Future Value of Ordinary Annuity</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
@@ -225,7 +225,7 @@ function Home() {
 </details>
 
         {/* Present Value of Ordinary Annuity */}
-        <details className="collapse bg-base-200">
+        <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Ordinary Annuity</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
@@ -246,7 +246,7 @@ function Home() {
 {/* Annuity Due Calculator  */}
       <div className='space-y-16'>
         {/* Present Value of Annuity Due */}
-        <details className="collapse bg-base-200">
+        <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Future Value of Annuity Due</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
@@ -264,7 +264,7 @@ function Home() {
         </details>
 
         {/* Present Value of Annuity DUe */}
-        <details className="collapse bg-base-200">
+        <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Annuity Due</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
