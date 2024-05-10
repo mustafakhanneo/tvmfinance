@@ -8,6 +8,10 @@ function Formula() {
   const presentOdiAnnuity = `$ PV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr]$`;
   const futureDueAnnuity = `$ FV = C \\times \\biggl[\\dfrac{\\left(1 + i\\right)^n -1}{i}\\biggr] \\times \\left(1 + i\\right)$`;
   const presentDueAnnuity = `$ PV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr] \\times \\left(1 + i\\right)$`;
+  const growingAnnuity = `$ PV = C \\times \\Biggl[\\dfrac{1- \\left(\\dfrac{1+g}{1+i}\\right)^{-n}}{i - g}\\Biggr]$`;
+  const effAR = `$ EAR = \\left(1 + \\dfrac{QR}{m}\\right)^m - 1$`;
+  const prepReturn = `$ PV = \\dfrac{C}{i}$`;
+  const growingPrepReturn = `$ PV = \\dfrac{C}{i-g}$`;
 
 
   return (
@@ -110,27 +114,70 @@ function Formula() {
 {/* Present Value of Growing Annuity */}
 <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Growing Annuity</summary>
-  
+  <div className='flex flex-col justify-center pb-5'>
+    <div className='flex justify-center items-center'>
+  <KatexSpan text={growingAnnuity} />
+  </div>
+  <p className='flex pl-5 font-medium'>Where:</p>
+  <div className='flex flex-col space-y-2 pl-5 pt-2'>
+  <KatexSpan text={`$PV =$ Present Value`} />
+  <KatexSpan text={`$C =$ Cash Flow`} />
+  <KatexSpan text={`$i =$ Interest Rate`} />
+  <KatexSpan text={`$g =$ Growing Rate`} />
+  <KatexSpan text={`$n =$ Period`} />
+  </div>
+  </div>
 </details>
 
 {/* EAR Effective Annual Rate */}
 <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Effective Annual Rate</summary>
-  
+  <div className='flex flex-col justify-center pb-5'>
+    <div className='flex justify-center items-center'>
+  <KatexSpan text={effAR} />
+  </div>
+  <p className='flex pl-5 font-medium'>Where:</p>
+  <div className='flex flex-col space-y-2 pl-5 pt-2'>
+  <KatexSpan text={`$EAR =$ Effective Annual Rate`} />
+  <KatexSpan text={`$QR =$ Quote Rate`} />
+  <KatexSpan text={`$m =$ No. of Compounding`} />
+  </div>
+  </div>
 </details>
 
 
 {/* Prepetual Investment Return */}
 <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium">Prepetual Investment Return</summary>
-  
+  <div className='flex flex-col justify-center pb-5'>
+    <div className='flex justify-center items-center'>
+  <KatexSpan text={prepReturn} />
+  </div>
+  <p className='flex pl-5 font-medium'>Where:</p>
+  <div className='flex flex-col space-y-2 pl-5 pt-2'>
+  <KatexSpan text={`$PV =$ Presant Value`} />
+  <KatexSpan text={`$C =$ Cash Flow`} />
+  <KatexSpan text={`$i =$ Interest Rate`} />
+  </div>
+  </div>
 </details>
 
 
 {/* Growing Prepetual Investment Return */}
 <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-medium"> Growing Prepetual Investment Return</summary>
-  
+  <div className='flex flex-col justify-center pb-5'>
+    <div className='flex justify-center items-center'>
+  <KatexSpan text={growingPrepReturn} />
+  </div>
+  <p className='flex pl-5 font-medium'>Where:</p>
+  <div className='flex flex-col space-y-2 pl-5 pt-2'>
+  <KatexSpan text={`$PV =$ Presant Value`} />
+  <KatexSpan text={`$C =$ Cash Flow`} />
+  <KatexSpan text={`$i =$ Interest Rate`} />
+  <KatexSpan text={`$g =$ Growth Rate`} />
+  </div>
+  </div>
 </details>
 
       </div>
