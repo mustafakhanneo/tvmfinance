@@ -14,8 +14,8 @@ function Formula() {
     <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
 <div className='flex flex-col justify-start pb-4 items-start'>
-      <p className='font-bold'>Instructions</p>
-      <p>Just enter known values and left the unknown value empty and Click Calculate.</p>
+      <p className='font-bold'>Formulas</p>
+      <p>All formulas are listed. Tap on formula name to view formula.</p>
      </div>
 {/* Simple Annuity Calculator  */}
 <details className="collapse collapse-arrow bg-base-200">
