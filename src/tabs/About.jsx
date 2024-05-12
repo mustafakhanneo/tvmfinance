@@ -20,12 +20,12 @@ const About = () => {
     <div className='flex flex-col justify-start space-y-2 pt-4'>
       <p className='font-medium font-tanker text-2xl mb-2'>Website Limitations</p>
       <p className='font-bold text-lg font-pilcrow'>TVM Finance can't calculate</p>
-      <ul className='pl-3'>
-        <li className='font-archivo'>Interest rate for Ordinary Annuity</li>
-        <li className='font-archivo'>Interest rate for Annuity Due</li>
-        <li className='font-archivo'>No of compounding per year for Effective Annual Rate</li>
-        <li className='font-archivo'>No of compounding per year for Effective Annual Rate</li>
-        <li className='font-archivo'>Interest and Growth rate for Growing Annuity</li>
+      <ul>
+        <li className='font-archivo'>1. Interest rate for Ordinary Annuity</li>
+        <li className='font-archivo'>2. Interest rate for Annuity Due</li>
+        <li className='font-archivo'>3. No of compounding per year for Effective Annual Rate</li>
+        <li className='font-archivo'>4. No of compounding per year for Effective Annual Rate</li>
+        <li className='font-archivo'>5. Interest and Growth rate for Growing Annuity</li>
       </ul>
     </div>
     </div>
