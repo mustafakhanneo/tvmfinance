@@ -7,6 +7,34 @@
         font-family: 'Tanker';
         src: url(./fonts/Tanker-Regular.ttf) format('truetype');
       }
+      @font-face {
+        font-family: 'Chillax';
+        src: url(./fonts/Chillax-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Pally';
+        src: url(./fonts/Pally-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Kalam';
+        src: url(./fonts/Kalam-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'QuickSand';
+        src: url(./fonts/Quicksand-Medium.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Archivo';
+        src: url(./fonts/Archivo-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Hind';
+        src: url(./fonts/Hind-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: 'Pilcrow';
+        src: url(./fonts/PilcrowRounded-Heavy.ttf) format('truetype');
+      }
   }
 @tailwind base;
 @tailwind components;

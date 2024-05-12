@@ -18,12 +18,12 @@ function Formula() {
     <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
 <div className='flex flex-col justify-start pb-4 items-start'>
-      <p className='font-bold'>Formulas</p>
-      <p>All formulas are listed. Tap on formula name to view formula.</p>
+      <p className='font-bold font-pilcrow'>Formulas</p>
+      <p className='font-archivo'>All formulas are listed. Tap on formula name to view formula.</p>
      </div>
 {/* Simple Annuity Calculator  */}
 <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Simple Present Future Value</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Simple Present Future Value</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={simpleAnnuity} />
@@ -41,7 +41,7 @@ function Formula() {
       <div className='space-y-6'>
         {/* Future Value of Ordinary Annuity */}
         <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Future Value of Ordinary Annuity</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Future Value of Ordinary Annuity</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={futureOdiAnnuity} />
@@ -58,7 +58,7 @@ function Formula() {
 
         {/* Present Value of Ordinary Annuity */}
         <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Ordinary Annuity</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Ordinary Annuity</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={presentOdiAnnuity} />
@@ -79,7 +79,7 @@ function Formula() {
       <div className='space-y-6'>
         {/* Present Value of Annuity Due */}
         <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Future Value of Annuity Due</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Future Value of Annuity Due</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={futureDueAnnuity} />
@@ -96,7 +96,7 @@ function Formula() {
 
         {/* Present Value of Annuity DUe */}
         <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Annuity Due</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Annuity Due</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={presentDueAnnuity} />
@@ -113,7 +113,7 @@ function Formula() {
 
 {/* Present Value of Growing Annuity */}
 <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Present Value of Growing Annuity</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Growing Annuity</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={growingAnnuity} />
@@ -131,7 +131,7 @@ function Formula() {
 
 {/* EAR Effective Annual Rate */}
 <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Effective Annual Rate</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Effective Annual Rate</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={effAR} />
@@ -148,7 +148,7 @@ function Formula() {
 
 {/* Prepetual Investment Return */}
 <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium">Prepetual Investment Return</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Prepetual Investment Return</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={prepReturn} />
@@ -165,7 +165,7 @@ function Formula() {
 
 {/* Growing Prepetual Investment Return */}
 <details className="collapse collapse-arrow bg-base-200">
-  <summary className="collapse-title sm:text-xl text-md font-medium"> Growing Prepetual Investment Return</summary>
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium"> Growing Prepetual Investment Return</summary>
   <div className='flex flex-col justify-center pb-5'>
     <div className='flex justify-center items-center'>
   <KatexSpan text={growingPrepReturn} />
