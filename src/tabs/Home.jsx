@@ -246,14 +246,15 @@ function Home() {
      const a = 1 + f/freqComp;
      const b = Math.pow(a, freqComp);
      const c = b - 1;
-     setAnswerEAR(c.toFixed(5))
+     const d = c * 100;
+     setAnswerEAR(`${d.toFixed(2)}%`)
     } else if(quoteRate === '') {
       const a = 1 + expar/100;
       const b = Math.pow(a, 1/freqComp);
       const c = b - 1;
       const d = c * freqComp;
       const f = d * 100;
-      setAnswerEAR(f.toFixed(5))
+      setAnswerEAR(`${f.toFixed(2)}%`)
     } else if(freqComp === '') {
     setAnswerEAR("Calculate yourself");
     } else {
