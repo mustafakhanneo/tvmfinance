@@ -111,7 +111,7 @@ function Amortization() {
     <thead>
           <tr>
             <th>Year</th>
-            <th>Beginning Balance</th>
+            <th>Beg. Balance</th>
             <th>Interest</th>
             <th>Principal</th>
             <th>Total Payment</th>
