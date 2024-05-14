@@ -328,10 +328,10 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Simple Present Future Value</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setPvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setPeroid(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPvalue(e.target.value)} type="number" placeholder="Present Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setFvalue(e.target.value)} type="number" placeholder="Future Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setIntr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPeroid(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={simpleAnnuity} className="btn w-auto back input-bordered">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answersimp || "Answer"}`}</p>
@@ -347,10 +347,10 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Future Value of Ordinary Annuity</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setOriFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriFcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriFintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriFperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriFvalue(e.target.value)} type="number" placeholder="Future Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriFcash(e.target.value)} type="number" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriFintr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriFperiod(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={oriFuture} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerOrdinaryFuture || "Answer"}`}</p>
@@ -365,10 +365,10 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Ordinary Annuity</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setOriPvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriPcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriPintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriPperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriPvalue(e.target.value)} type="number" placeholder="Present Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriPcash(e.target.value)} type="numbert" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriPintr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriPperiod(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={oriPresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerOrdinaryPresent || "Answer"}`}</p>
@@ -381,15 +381,15 @@ function Home() {
      
 {/* Annuity Due Calculator  */}
       <div className='space-y-6'>
-        {/* Present Value of Annuity Due */}
+        {/* Future Value of Annuity Due */}
         <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Future Value of Annuity Due</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setDueFvalue(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setDueFcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setDueFintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setDueFperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDueFvalue(e.target.value)} type="number" placeholder="Future Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDueFcash(e.target.value)} type="number" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDueFintr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDueFperiod(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={dueFuture} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerDueFuture || "Answer"}`}</p>
@@ -404,10 +404,10 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Annuity Due</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setDuePvalue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setDuePcash(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setDuePintr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setDuePperiod(e.target.value)} type="text" placeholder="Period" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePvalue(e.target.value)} type="number" placeholder="Present Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePcash(e.target.value)} type="number" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePintr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setDuePperiod(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={duePresent} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerDuePresent || "Answer"}`}</p>
@@ -421,11 +421,11 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Growing Annuity</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setGPresentValue(e.target.value)} type="text" placeholder="Present Value" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
-        <input onChange={e => setGCashflow(e.target.value)} type="text" placeholder="Cash Flow" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
-        <input onChange={e => setGIntr(e.target.value)} type="text" placeholder="Interest in % eg: 10" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
-        <input onChange={e => setGRateAnnu(e.target.value)} type="text" placeholder="Growth Rate in % eg: 10" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
-        <input onChange={e => setGPeriod(e.target.value)} type="text" placeholder="Period" className="input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGPresentValue(e.target.value)} type="number" placeholder="Present Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGCashflow(e.target.value)} type="number" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGIntr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGRateAnnu(e.target.value)} type="number" placeholder="Growth Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setGPeriod(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
         <button onClick={calGAnnu} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerGAnnu || "Answer"}`}</p>
@@ -439,9 +439,9 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Effective Annual Rate</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setExpar(e.target.value)} type="text" placeholder="Effective Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setQuoteRate(e.target.value)} type="text" placeholder="Quote Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setFreqComp(e.target.value)} type="text" placeholder="no. of Compounding per Year" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setExpar(e.target.value)} type="number" placeholder="Effective Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setQuoteRate(e.target.value)} type="number" placeholder="Quote Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setFreqComp(e.target.value)} type="number" placeholder="no. of Compounding per Year" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={calEAR} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerEAR || "Answer"}`}</p>
@@ -456,9 +456,9 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Prepetual Investment Return</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setPrepFuture(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setPrepCashflow(e.target.value)} type="text" placeholder="Cashflow" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setPrepintr(e.target.value)} type="text" placeholder="interest Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPrepFuture(e.target.value)} type="number" placeholder="Future Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPrepCashflow(e.target.value)} type="number" placeholder="Cashflow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setPrepintr(e.target.value)} type="number" placeholder="interest Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={calPrep} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerPrepsimp || "Answer"}`}</p>
@@ -473,10 +473,10 @@ function Home() {
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium"> Growing Prepetual Investment Return</summary>
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input onChange={e => setGPrepFuture(e.target.value)} type="text" placeholder="Future Value" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setGPrepCashflow(e.target.value)} type="text" placeholder="Cashflow" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setGPrepintr(e.target.value)} type="text" placeholder="Interest Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setGRate(e.target.value)} type="text" placeholder="Growth Rate in % eg: 10" className="input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGPrepFuture(e.target.value)} type="number" placeholder="Future Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGPrepCashflow(e.target.value)} type="number" placeholder="Cashflow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGPrepintr(e.target.value)} type="number" placeholder="Interest Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setGRate(e.target.value)} type="number" placeholder="Growth Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={callGPrep} className="btn input-bordered back">Calculate</button>
         <div className='items-center input input-bordered justify-center flex'>
           <p className=''>{`${answerGPrepsimp || "Answer"}`}</p>
