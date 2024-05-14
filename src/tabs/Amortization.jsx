@@ -75,6 +75,7 @@ function Amortization() {
       </div>
       </div>
       </div>
+      <div className="divider"></div> 
       <p className="sm:text-xl text-md font-pilcrow font-medium">Principal Amortization Table</p>
       <div className="overflow-x-auto">
   <table className="table">
@@ -103,7 +104,7 @@ function Amortization() {
         </tbody>
       </table>
       </div>
-
+      <div className="divider"></div> 
       <p className="sm:text-xl text-md font-pilcrow font-medium">Payment Amortization Table</p>
       <div className="overflow-x-auto">
   <table className="table">
