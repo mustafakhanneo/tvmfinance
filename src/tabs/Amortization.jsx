@@ -69,7 +69,7 @@ function Amortization() {
         <input type="number" placeholder="Interest Rate in %" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={interestRate} onChange={(e) => setInterestRate(parseFloat(e.target.value))} />
         <input type="number" placeholder="Years" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={duration} onChange={(e) => setDuration(parseInt(e.target.value))} />
       </div>
-      <div className='flex flex-row space-x-4 justify-start'>
+      <div className='flex sm:flex-row flex-col sm:space-x-4 space-x-0  justify-start'>
       <button className="btn w-auto back input-bordered" onClick={handleCalculatePrincipalAmortization}>Calculate Principal Amortization</button>
       <button className="btn w-auto back input-bordered" onClick={handleCalculatePaymentAmortization}>Calculate Payment Amortization</button>
       </div>
