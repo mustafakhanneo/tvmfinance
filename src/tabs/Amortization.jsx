@@ -59,7 +59,11 @@ function Amortization() {
 
   return (
     <div className='flex flex-col space-y-4'>
-      <p className="sm:text-xl text-md font-pilcrow font-medium">Amortization Calculator</p>
+    <div tabIndex={0} className="collapse collapse-open border border-base-300 bg-base-200"> 
+  <div className="collapse-title text-xl font-medium">
+    Amortization Calculator
+  </div>
+  <div className="collapse-content space-y-4"> 
       <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input type="number" placeholder="Loan Amount" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={loanAmount} onChange={(e) => setLoanAmount(parseFloat(e.target.value))} />
         <input type="number" placeholder="Interest Rate in %" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={interestRate} onChange={(e) => setInterestRate(parseFloat(e.target.value))} />
@@ -68,6 +72,8 @@ function Amortization() {
       <div className='flex flex-row space-x-4 justify-start'>
       <button className="btn w-auto back input-bordered" onClick={handleCalculatePrincipalAmortization}>Calculate Principal Amortization</button>
       <button className="btn w-auto back input-bordered" onClick={handleCalculatePaymentAmortization}>Calculate Payment Amortization</button>
+      </div>
+      </div>
       </div>
       <p className="sm:text-xl text-md font-pilcrow font-medium">Principal Amortization Table</p>
       <div className="overflow-x-auto">
