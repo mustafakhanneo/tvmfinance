@@ -86,7 +86,7 @@ function Amortization() {
         <th>Beg. Balance</th>
         <th>Interest</th>
         <th>Principal</th>
-        <th>Principal</th>
+        <th>Total Payment</th>
         <th>Remaining Balance</th>
       </tr>
     </thead>

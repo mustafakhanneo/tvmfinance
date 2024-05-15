@@ -12,6 +12,8 @@ function Formula() {
   const effAR = `$ EAR = \\left(1 + \\dfrac{QR}{m}\\right)^m - 1$`;
   const prepReturn = `$ PV = \\dfrac{C}{i}$`;
   const growingPrepReturn = `$ PV = \\dfrac{C}{i-g}$`;
+  const bondValue = `$ BV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr] + \\dfrac{FV}{\\left(1 + i\\right)^n}$`;
+
 
 
   return (
@@ -77,11 +79,11 @@ function Formula() {
      
 {/* Annuity Due Calculator  */}
       <div className='space-y-6'>
-        {/* Present Value of Annuity Due */}
+        {/* Future Value of Annuity Due */}
         <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Future Value of Annuity Due</summary>
   <div className='flex flex-col justify-center pb-5'>
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center sm:text-lg text-sm items-center'>
   <KatexSpan text={futureDueAnnuity} />
   </div>
   <p className='flex pl-5 font-medium'>Where:</p>
@@ -98,7 +100,7 @@ function Formula() {
         <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Present Value of Annuity Due</summary>
   <div className='flex flex-col justify-center pb-5'>
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center sm:text-lg text-sm items-center'>
   <KatexSpan text={presentDueAnnuity} />
   </div>
   <p className='flex pl-5 font-medium'>Where:</p>
@@ -176,6 +178,24 @@ function Formula() {
   <KatexSpan text={`$C =$ Cash Flow`} />
   <KatexSpan text={`$i =$ Interest Rate`} />
   <KatexSpan text={`$g =$ Growth Rate`} />
+  </div>
+  </div>
+</details>
+
+{/* Bond Value */}
+<details className="collapse collapse-arrow bg-base-200">
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Bond Value</summary>
+  <div className='flex flex-col justify-center pb-5'>
+    <div className='flex justify-center sm:text-lg text-sm items-center'>
+  <KatexSpan text={bondValue} />
+  </div>
+  <p className='flex pl-5 font-medium'>Where:</p>
+  <div className='flex flex-col space-y-2 pl-5 pt-2'>
+  <KatexSpan text={`$BV =$ Bond Value Value`} />
+  <KatexSpan text={`$FV =$ Face Value`} />
+  <KatexSpan text={`$C =$ Coupon Amount`} />
+  <KatexSpan text={`$i =$ Yeild Rate`} />
+  <KatexSpan text={`$n =$ Period of Maturity`} />
   </div>
   </div>
 </details>

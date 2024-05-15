@@ -45,6 +45,12 @@ function Home() {
   const [gRateAnnu, setGRateAnnu] = useState('');
   const [gPeriod, setGPeriod] = useState('');
   const [answerGAnnu, setAnswerGAnnu] = useState('');
+  const [bondValue, setBondValue] = useState('');
+  const [couponAmount, setCouponAmount] = useState('');
+  const [yeildRate, setYeildRate] = useState('');
+  const [faceValue, setFaceValue] = useState('');
+  const [bondPeriod, setBondPeriod] = useState('');
+  const [answerBondValue, setAnswerBondValue] = useState('');
 
   const simpleAnnuity = () => {
    if(pvalue === '') {
@@ -316,6 +322,51 @@ function Home() {
     }
    }
 
+   const calBondValue = () => {
+    if(bondValue === '') {
+      const f = yeildRate/100
+     const a = 1 + yeildRate/100;
+     const z = -bondPeriod;
+     const b = Math.pow(a, z);
+     const c = 1 - b;
+     const d = (c/f);
+     const e = d * couponAmount;
+    const g = faceValue/Math.pow(a, bondPeriod);
+    const h = e + g;
+     setAnswerBondValue(h.toFixed(5))
+    } else if(faceValue === '') {
+      const a = 1 + yeildRate/100;
+      const z = -bondPeriod;
+      const b = yeildRate/100;
+      const c = Math.pow(a, bondPeriod);
+      const d = c/b;
+      const e = bondValue*b;
+      const f = Math.pow(a, z);
+      const g = 1 - f;
+      const h = couponAmount*g;
+      const i = e-h;
+      const j = d*i;
+      setAnswerBondValue(j.toFixed(5))
+    } else if(couponAmount === '') {
+      const f = yeildRate/100
+     const a = 1 + yeildRate/100;
+     const z = -bondPeriod;
+     const b = Math.pow(a, z);
+     const c = 1 - b;
+     const d = (c/f);
+    const g = faceValue/Math.pow(a, bondPeriod);
+    const r = bondValue - g;
+    const s = (r/d)
+    setAnswerBondValue(s.toFixed(5))
+    } else if(yeildRate === '') {
+      setAnswerBondValue("Calculate Your Self")
+    } else if(bondPeriod === '') {
+      setAnswerBondValue("Calculate Your Self")
+    } else {
+     setAnswerBondValue("All Already Known")
+    }
+   }
+
   return (
     <div className='space-y-6 p-[1rem] m-auto max-w-[1280px]'>
     
@@ -342,7 +393,7 @@ function Home() {
       </details>
 {/* Ordinary Annuity Calculator  */}
       <div className='space-y-6'>
-        {/* Present Value of Ordinary Annuity */}
+        {/* Future Value of Ordinary Annuity */}
         <details className="collapse collapse-arrow bg-base-200">
   <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Future Value of Ordinary Annuity</summary>
   <div className="collapse-content"> 
@@ -366,7 +417,7 @@ function Home() {
   <div className="collapse-content"> 
         <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
         <input onChange={e => setOriPvalue(e.target.value)} type="number" placeholder="Present Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
-        <input onChange={e => setOriPcash(e.target.value)} type="numbert" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
+        <input onChange={e => setOriPcash(e.target.value)} type="number" placeholder="Cash Flow" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriPintr(e.target.value)} type="number" placeholder="Interest in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <input onChange={e => setOriPperiod(e.target.value)} type="number" placeholder="Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" />
         <button onClick={oriPresent} className="btn input-bordered back">Calculate</button>
@@ -485,6 +536,24 @@ function Home() {
         </div>
 </details>
 
+{/* Bond value Calculator  */}
+<details className="collapse collapse-arrow bg-base-200">
+  <summary className="collapse-title sm:text-xl text-md font-pilcrow font-medium">Bond Value</summary>
+  <div className="collapse-content"> 
+        <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
+        <input onChange={e => setBondValue(e.target.value)} type="number" placeholder="Bond Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setFaceValue(e.target.value)} type="number" placeholder="Face Value" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setCouponAmount(e.target.value)} type="number" placeholder="Coupon Amount" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setYeildRate(e.target.value)} type="number" placeholder="Yeild Rate in % eg: 10" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <input onChange={e => setBondPeriod(e.target.value)} type="number" placeholder="Maturity Period" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered sm:w-1/5 w-auto max-w-xs" />
+        <button onClick={calBondValue} className="btn w-auto back input-bordered">Calculate</button>
+        <div className='items-center input input-bordered justify-center flex'>
+          <p className=''>{`${answerBondValue || "Answer"}`}</p>
+        </div>
+        
+        </div>
+      </div>
+      </details>
       </div>
      
     </div>
