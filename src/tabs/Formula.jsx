@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import KatexSpan from '../comps/KatexSpan'
 
 function Formula() {
@@ -157,7 +156,7 @@ function Formula() {
   </div>
   <p className='flex pl-5 font-medium'>Where:</p>
   <div className='flex flex-col space-y-2 pl-5 pt-2'>
-  <KatexSpan text={`$PV =$ Presant Value`} />
+  <KatexSpan text={`$PV =$ Present Value`} />
   <KatexSpan text={`$C =$ Cash Flow`} />
   <KatexSpan text={`$i =$ Interest Rate`} />
   </div>
@@ -174,7 +173,7 @@ function Formula() {
   </div>
   <p className='flex pl-5 font-medium'>Where:</p>
   <div className='flex flex-col space-y-2 pl-5 pt-2'>
-  <KatexSpan text={`$PV =$ Presant Value`} />
+  <KatexSpan text={`$PV =$ Present Value`} />
   <KatexSpan text={`$C =$ Cash Flow`} />
   <KatexSpan text={`$i =$ Interest Rate`} />
   <KatexSpan text={`$g =$ Growth Rate`} />

@@ -25,6 +25,7 @@ const About = () => {
         <li className='font-archivo'>2. Interest rate for Annuity Due</li>
         <li className='font-archivo'>3. No of compounding per year for Effective Annual Rate</li>
         <li className='font-archivo'>4. Interest and Growth rate for Growing Annuity</li>
+        <li className='font-archivo'>5. Yeild Rate and Maturity period of Bond Value</li>
       </ul>
     </div>
     </div>
