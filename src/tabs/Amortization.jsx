@@ -96,7 +96,7 @@ function Amortization() {
             <NumericFormat
               value={interestRate}
               suffix="%"
-              placeholder="Interest in %"
+              placeholder="Interest Rate in %"
               onValueChange={(values) =>
                 setInterestRate(parseFloat(values.value))
               }
