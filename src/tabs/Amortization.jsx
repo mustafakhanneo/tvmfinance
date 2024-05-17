@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { NumericFormat } from "react-number-format";
+
 
 function Amortization() {
   const [loanAmount, setLoanAmount] = useState('');
@@ -65,9 +67,27 @@ function Amortization() {
   </div>
   <div className="collapse-content space-y-4"> 
       <div className='flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2'>
-        <input type="number" placeholder="Loan Amount" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={loanAmount} onChange={(e) => setLoanAmount(parseFloat(e.target.value))} />
-        <input type="number" placeholder="Interest Rate in %" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={interestRate} onChange={(e) => setInterestRate(parseFloat(e.target.value))} />
-        <input type="number" placeholder="Years" className="[&::-webkit-inner-spin-button]:appearance-none [appearance:textfield] input input-bordered w-auto max-w-xs" value={duration} onChange={(e) => setDuration(parseInt(e.target.value))} />
+      <NumericFormat
+          value={loanAmount}
+          prefix="$"
+          thousandSeparator
+          placeholder='Loan Amount'
+          onValueChange={values => setLoanAmount(parseFloat(values.value))}
+          className="input input-bordered w-auto max-w-xs"
+          />
+          <NumericFormat
+          value={interestRate}
+          suffix="%"
+          placeholder='Interest in %'
+          onValueChange={values => setInterestRate(parseFloat(values.value))}
+          className="input input-bordered w-auto max-w-xs"
+          />
+          <NumericFormat
+          value={duration}
+          placeholder='Years'
+          onValueChange={values => setDuration(parseInt(values.value))}
+          className="input input-bordered w-auto max-w-xs"
+          />
       </div>
       <div className='flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-y-4  justify-start'>
       <button className="btn w-auto back input-bordered" onClick={handleCalculatePrincipalAmortization}>Calculate Principal Amortization</button>
