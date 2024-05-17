@@ -437,7 +437,7 @@ function Home() {
             <NumericFormat
               value={intr}
               suffix="%"
-              placeholder="Interest in %"
+              placeholder="Interest Rate in %"
               onValueChange={(values) => setIntr(values.value)}
               className="input input-bordered w-auto max-w-xs"
             />
