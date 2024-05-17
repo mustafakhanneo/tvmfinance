@@ -190,7 +190,7 @@ function Formula() {
   </div>
   <p className='flex pl-5 font-medium'>Where:</p>
   <div className='flex flex-col space-y-2 pl-5 pt-2'>
-  <KatexSpan text={`$BV =$ Bond Value Value`} />
+  <KatexSpan text={`$BV =$ Bond Value`} />
   <KatexSpan text={`$FV =$ Face Value`} />
   <KatexSpan text={`$C =$ Coupon Amount`} />
   <KatexSpan text={`$i =$ Yeild Rate`} />
