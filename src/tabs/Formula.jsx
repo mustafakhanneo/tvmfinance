@@ -8,7 +8,7 @@ function Formula() {
   const presentOdiAnnuity = `$ PV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr]$`;
   const futureDueAnnuity = `$ FV = C \\times \\biggl[\\dfrac{\\left(1 + i\\right)^n -1}{i}\\biggr] \\times \\left(1 + i\\right)$`;
   const presentDueAnnuity = `$ PV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr] \\times \\left(1 + i\\right)$`;
-  const growingAnnuity = `$ PV = C \\times \\Biggl[\\dfrac{1- \\left(\\dfrac{1+g}{1+i}\\right)^{-n}}{i - g}\\Biggr]$`;
+  const growingAnnuity = `$ PV = C \\times \\Biggl[\\dfrac{1- \\left(\\dfrac{1+g}{1+i}\\right)^{n}}{i - g}\\Biggr]$`;
   const effAR = `$ EAR = \\left(1 + \\dfrac{QR}{m}\\right)^m - 1$`;
   const prepReturn = `$ PV = \\dfrac{C}{i}$`;
   const growingPrepReturn = `$ PV = \\dfrac{C}{i-g}$`;
