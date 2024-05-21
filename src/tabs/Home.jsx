@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { android } from "../assets";
+
 import { NumericFormat } from "react-number-format";
 
 function Home() {
@@ -404,6 +406,20 @@ function Home() {
 
   return (
     <div className="space-y-6 p-[1rem] m-auto max-w-[1280px]">
+      <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-[sans-serif] space-y-4 p-2">
+            <div class="container mx-auto flex sm:flex-row flex-col justify-around items-center">
+              <p className="sm:text-xl text-sm text-white font-tanker">Android App is Available</p>
+            <button class="px-3 py-1.5 flex bg-[#FFFDD0] gap-2 mt-2 items-center rounded-xl">
+  <div class="w-10">
+    <img class="h-full w-full"  src={android}/>
+  </div>
+  <div class="">
+    <p class="text-lg text-[#191E24] font-tanker sm:py-3 py-1 px-2">Download</p>
+  </div>
+</button>
+<p className="sm:text-xl sm:flex hidden text-sm text-white font-tanker">Download Now</p>
+            </div>
+        </div>
       <div className="flex flex-col justify-start pb-4 items-start">
         <p className="sm:text-xl text-md font-pilcrow">Instructions</p>
         <p className="font-archivo">

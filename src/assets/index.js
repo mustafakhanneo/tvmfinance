@@ -5,6 +5,8 @@ import facebook from './facebook.svg';
 import instagram from './instagram.svg';
 import x from './x.svg';
 import youtube from './youtube.svg';
+import android from './android.png';
+
 
 
 export {
@@ -14,6 +16,7 @@ export {
   facebook,
   instagram,
   youtube,
-  x
+  x,
+  android
 
 };
