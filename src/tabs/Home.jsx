@@ -409,14 +409,14 @@ function Home() {
       <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-[sans-serif] space-y-4 p-2">
             <div class="container mx-auto flex sm:flex-row flex-col justify-around items-center">
               <p className="sm:text-xl text-sm text-white font-tanker">Android App is Available</p>
-            <button class="px-3 py-1.5 flex bg-[#FFFDD0] gap-2 mt-2 items-center rounded-xl">
+            <a href="https://www.dropbox.com/scl/fi/3w86c8mmq1u95964w0aqv/tvmfinanceapp-1.0.0.apk?rlkey=n4g9d1w7t0dmmlon1adfqmqr0&st=6urramiq&dl=1" class="px-3 py-1.5 flex bg-[#FFFDD0] gap-2 mt-2 items-center rounded-xl">
   <div class="w-10">
     <img class="h-full w-full"  src={android}/>
   </div>
   <div class="">
     <p class="text-lg text-[#191E24] font-tanker sm:py-3 py-1 px-2">Download</p>
   </div>
-</button>
+</a>
 <p className="sm:text-xl sm:flex hidden text-sm text-white font-tanker">Download Now</p>
             </div>
         </div>
