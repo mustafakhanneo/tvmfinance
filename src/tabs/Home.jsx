@@ -409,7 +409,7 @@ function Home() {
       <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-[sans-serif] space-y-4 p-2">
             <div class="container mx-auto flex sm:flex-row flex-col justify-around items-center">
               <p className="sm:text-xl text-sm text-white font-tanker">Android App is Available</p>
-            <a href="https://github.com/mustafakhanneo/tvmfinanceapp/releases/download/v1.0.1/tvmfinanceapp-1.0.1.apk" class="px-3 py-1.5 flex bg-white gap-2 mt-2 items-center rounded-xl">
+            <a href="https://www.dropbox.com/scl/fi/uflfajx36w2ca60r9zkys/tvmfinanceapp-1.0.1.apk?rlkey=shnuca86l0r6rwqw1wzf3iu43&st=9u5wznor&dl=1" class="px-3 py-1.5 flex bg-white gap-2 mt-2 items-center rounded-xl">
   <div class="w-10">
     <img class="h-full w-full"  src={android}/>
   </div>
