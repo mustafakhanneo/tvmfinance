@@ -103,7 +103,24 @@ function Home() {
       const g = parseFloat(f).toLocaleString();
       setAnswerOrdinaryFuture(`$${g}`);
     } else if (oriFintr === "") {
-      setAnswerOrdinaryFuture("Calculate Your Self");
+      const maxIterations = 1000;
+      let r = 0.1;
+      let iteration = 0;
+      const tolerance = 1e-9;
+      while (iteration < maxIterations) {
+        let FVr = oriFcash * ((Math.pow(1 + r, oriFperiod) - 1) / r);
+        let derivativeFVr = oriFcash * ((oriFperiod * Math.pow(1 + r, oriFperiod - 1) * r - (Math.pow(1 + r, oriFperiod) - 1)) / (r * r));
+
+        let newR = r - (FVr - oriFvalue) / derivativeFVr;
+
+        if (Math.abs(newR - r) < tolerance) {
+      setAnswerOrdinaryFuture(`${(newR * 100).toFixed(2)}%`);
+            return newR;
+        }
+
+        r = newR;
+        iteration++;
+    }
     } else if (oriFperiod === "") {
       const a = oriFvalue / oriFcash;
       const b = 1 + oriFintr / 100;
@@ -138,7 +155,24 @@ function Home() {
       const g = parseFloat(f).toLocaleString();
       setAnswerOrdinaryPresent(`$${g}`);
     } else if (oriPintr === "") {
-      setAnswerOrdinaryPresent("Calculate Your Self");
+      const maxIterations = 1000;
+      let r = 0.1;
+      let iteration = 0;
+      const tolerance = 1e-9;
+      while (iteration < maxIterations) {
+        let PVr = oriPcash * ((1 - Math.pow(1 + r, -oriPperiod)) / r);
+        let derivativePVr = oriPcash * ((oriPperiod * Math.pow(1 + r, -oriPperiod - 1) * r - (1 - Math.pow(1 + r, -oriPperiod))) / (r * r));
+
+        let newR = r - (PVr - oriPvalue) / derivativePVr;
+
+        if (Math.abs(newR - r) < tolerance) {
+      setAnswerOrdinaryPresent(`${(newR * 100).toFixed(2)}%`);
+            return newR;
+        }
+
+        r = newR;
+        iteration++;
+    }
     } else if (oriPperiod === "") {
       const a = oriPvalue / oriPcash;
       const b = 1 + oriPintr / 100;
